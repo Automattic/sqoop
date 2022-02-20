@@ -84,7 +84,7 @@ public class ExportStressTest extends Configured implements Tool {
 
   /** Create a table to hold our results. Drop any existing definition. */
   public void createTable(String connectStr, String username) throws Exception {
-    Class.forName("com.mysql.jdbc.Driver"); // Load mysql driver.
+    Class.forName("org.mariadb.jdbc.Driver"); // Load mysql driver.
 
     Connection conn = DriverManager.getConnection(connectStr, username, null);
     conn.setAutoCommit(false);
